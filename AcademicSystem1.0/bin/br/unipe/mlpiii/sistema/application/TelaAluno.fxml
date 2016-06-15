@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.unipe.mlpiii.sistema.controlador.ControleTelaAluno">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu fx:id="sobreta" mnemonicParsing="false" text="Opções">
+               <items>
+                  <MenuItem fx:id="sobreta" mnemonicParsing="false" onAction="#sobre" text="Sobre" />
+                  <MenuItem fx:id="sairta" mnemonicParsing="false" onAction="#sair" text="Sair" />
+               </items></Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <ScrollPane prefHeight="551.0" prefWidth="500.0">
+               <content>
+                  <Pane prefHeight="540.0" prefWidth="894.0">
+                     <children>
+                        <Text fx:id="discita" layoutX="257.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Disciplina" wrappingWidth="68.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="disciplinaa" layoutX="333.0" layoutY="46.0" prefHeight="25.0" prefWidth="312.0" />
+                        <Button fx:id="buscarta" layoutX="594.0" layoutY="83.0" mnemonicParsing="false" text="Buscar" />
+                        <Accordion layoutY="22.0">
+                          <panes>
+                            <TitledPane animated="false" text="Academico">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="nf" layoutX="25.0" layoutY="26.0" mnemonicParsing="false" onAction="#notas" prefHeight="25.0" prefWidth="150.0" text="Notas e Faltas" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Financeiro">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="boletos" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Boletos" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Relatorios">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="situa" layoutX="25.0" layoutY="33.0" mnemonicParsing="false" prefWidth="150.0" text="Situação do Aluno" />
+                                          <Button fx:id="relatoriofinanceiro" layoutX="25.0" layoutY="78.0" mnemonicParsing="false" prefWidth="150.0" text="Relatorio Financeiro" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <Accordion layoutX="6.0" layoutY="286.0" />
+                     </children>
+                  </Pane>
+               </content></ScrollPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="ARTKEVWAS - 2016" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@../../Java%20Template/ComplexApplication_css/ComplexApplication.css" />
+  </stylesheets>
+</VBox>

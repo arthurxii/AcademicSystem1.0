@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.unipe.mlpiii.sistema.controlador.ControleTelaNotasFaltas">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="900.0">
+        <children>
+          <MenuBar VBox.vgrow="NEVER">
+            <menus>
+              <Menu mnemonicParsing="false" text="Opções">
+                     <items>
+                        <MenuItem fx:id="sobreNF" mnemonicParsing="false" onAction="#sobre" text="Sobre" />
+                        <MenuItem fx:id="sairNF" mnemonicParsing="false" onAction="#sair" text="Sair" />
+                     </items></Menu>
+            </menus>
+          </MenuBar>
+            <VBox alignment="CENTER" prefHeight="401.0" prefWidth="896.0">
+               <children>
+                  <VBox prefHeight="11.0" prefWidth="896.0" />
+                  <TableView fx:id="tabelaum" prefHeight="234.0" prefWidth="896.0" VBox.vgrow="NEVER">
+                     <columns>
+                        <TableColumn fx:id="disciplina" prefWidth="180.0" text="Disciplina" />
+                        <TableColumn fx:id="nota1" prefWidth="180.0" text="Nota1" />
+                        <TableColumn fx:id="nota2" prefWidth="180.0" text="Nota2" />
+                        <TableColumn fx:id="nota3" prefWidth="180.0" text="Nota3" />
+                        <TableColumn fx:id="media" prefWidth="180.0" text="Media" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets top="-80.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <TableView fx:id="tabeladois" prefHeight="58.0" prefWidth="896.0">
+                     <columns>
+                        <TableColumn fx:id="discfaltas" prefWidth="180.0" text="Disciplina" />
+                        <TableColumn fx:id="falta1" prefWidth="180.0" text="Falta 1º Estagio" />
+                        <TableColumn fx:id="falta2" prefWidth="180.0" text="Falta 2º Estagio" />
+                        <TableColumn fx:id="falta3" prefWidth="180.0" text="Falta 3º Estagio" />
+                        <TableColumn fx:id="totalfalta" prefWidth="180.0" text="Total de Faltas" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+            <SplitPane prefHeight="157.0" prefWidth="900.0">
+               <items>
+                  <Pane prefHeight="101.0" prefWidth="898.0">
+                     <children>
+                        <Button fx:id="voltarfaltas" layoutX="832.0" layoutY="25.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+                     </children>
+                  </Pane>
+               </items>
+            </SplitPane>
+          <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+            <children>
+              <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" HBox.hgrow="ALWAYS">
+                <font>
+                  <Font size="11.0" fx:id="x3" />
+                </font>
+                <textFill>
+                  <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+                </textFill>
+              </Label>
+              <Pane centerShape="false" prefHeight="-1.0" prefWidth="-1.0" scaleShape="false" HBox.hgrow="ALWAYS" />
+              <Label font="$x3" maxWidth="-1.0" text="ARTKEVWAS - 2016" textFill="$x4" HBox.hgrow="NEVER" />
+            </children>
+            <padding>
+              <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+            </padding>
+          </HBox>
+        </children>
+        <stylesheets>
+          <URL value="@../../Java%20Template/ComplexApplication_css/ComplexApplication.css" />
+        </stylesheets>
+      </VBox>
+   </children>
+</AnchorPane>
